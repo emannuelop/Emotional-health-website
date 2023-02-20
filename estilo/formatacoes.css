@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cor0: #cfe3eed8;
+    --cor1: #0086c46c;
+    --cor2: #0473a7;
+    --cor3: #005f8b;
+    --cor4: #01415f;
+    --cor5: #002a3d;
+
+    --font-padrao: 'Roboto';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--font-padrao);
+    font-weight: normal;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 110px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--font-padrao);
+    font-size: 3em;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+header > img {
+    border-radius: 50%;
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+}
+
+nav > a {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+nav > a:hover {
+    background-color: var(--cor0);
+    color: var(--cor5);
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+main h2 {
+    font-size: 2em;
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+}
+
+/*Início do vídeo*/
+
+.video {
+    background-color: var(--cor5);
+    margin: 0px -5px 15px -5px;
+    padding: 20px;
+    padding-bottom: 50%;
+    position: relative;
+    border-radius: 10px;
+}
+
+.video iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+/*Fim do vídeo*/
+
+article > h3 {
+    font-size: 1.5em;
+    padding-top: 10px;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+article > img {
+    background-color: var(--cor5);
+    margin: 10px 30px 10px 0px;
+    position: relative;
+    border-radius: 10px;
+    width: 150px;
+    padding: 15px 15px 15px 15px;
+    float: left;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+aside > h2 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > h3 {
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+aside > blockquote.um {
+    box-shadow: 0px 0px 0px 1px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside > blockquote.dois {
+    box-shadow: 0px 0px 0px 1px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*Início do Rodapé*/
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer > p > a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+/*Fim do Rodapé*/
+
+/*Início do carrossel*/
+
+.carrossel {
+    background-color: var(--cor5);
+    margin: 20px 50px 20px 50px;
+    padding: 20px;
+    padding-bottom: 2%;
+    position: relative;
+    border-radius: 10px;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 200px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    top: 103%;
+    left: 4%;
+    width: 95%;
+    height: 2%;
+}
+
+.manual-btn {
+    border: 2px solid var(--cor2);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+/*Fim do carrossel*/
